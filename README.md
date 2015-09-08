@@ -212,7 +212,8 @@ window.navigator.getUserMedia({
 ## Setup this project
 
 - Install or update to at lest version 0.10.26 of node and version 1.4.6 of npm
-- Install `grunt-cli` (See: http://gruntjs.com/getting-started)
+- Install `grunt-cli` using `npm install -g grunt-cli`
+- Install `karma-cli` using `npm install -g karma-cli` (only required if you plan to use the tests)
 - Run `npm install` to install dev dependencies.
 - Run `npm install -g browserify` and `npm install -g testling` (might require sudo) to install the necessary tools to test locally
 
