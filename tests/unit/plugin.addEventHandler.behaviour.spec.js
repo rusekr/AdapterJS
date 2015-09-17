@@ -11,8 +11,6 @@ var gUMTimeout = 25000;
 // Test item timeout
 var testItemTimeout = 4000;
 
-var timeStampMaxError = 60000;
-
 if(webrtcDetectedBrowser == 'IE' || webrtcDetectedBrowser == 'safari') {
   
   describe('PluginAPI | EventHandler', function() {
