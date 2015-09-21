@@ -57,7 +57,6 @@ if(webrtcDetectedBrowser == 'IE' || webrtcDetectedBrowser == 'safari') {
 
     it('plugin.addEventHandler :: existence', function(done) {
       this.timeout(testItemTimeout);
-      video.id = 'video';
 
       video = attachMediaStream(video, stream);
 
@@ -68,17 +67,16 @@ if(webrtcDetectedBrowser == 'IE' || webrtcDetectedBrowser == 'safari') {
 
     it('plugin.addEventHandler :: behaviour', function(done) {
       this.timeout(testItemTimeout);
-      video.id = 'video';
 
       video = attachMediaStream(video, stream);
 
-      var func = function() {
-        done();
-      };
+      var eventName = Math.random().toString(36).slice(2);
 
-      video.addEventHandler("onplay",func);
-      video.pause();
-      video.play();
+      video.addEventHandler(eventName, function());
+
+      expect(video.eventName).not.to.be.undefined;
+
+      done();
     });
 
   });
