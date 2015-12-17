@@ -881,6 +881,10 @@ if (navigator.mozGetUserMedia) {
     } else {
       try {
         var axo = new ActiveXObject(comName + '.' + plugName);
+        if (axo.version === "0.8.862" ) { // NOTICE: Bad version override
+          notInstalledCb();
+          return;
+        }
       } catch (e) {
         notInstalledCb();
         return;
